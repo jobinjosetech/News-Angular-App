@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ViewNewsComponent } from './view-news/view-news.component';
 import { NavbarComponent } from './navbar/navbar.component';
+
 
 const myRoutes:Routes = [
   {
@@ -23,7 +24,8 @@ const myRoutes:Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRoutes)
+    RouterModule.forRoot(myRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
